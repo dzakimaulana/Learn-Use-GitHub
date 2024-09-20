@@ -5,6 +5,11 @@ import (
 	"os"
 )
 
+type Person struct {
+	account Account
+	wallet  Wallet
+}
+
 func main() {
 	var input int
 	var username string
