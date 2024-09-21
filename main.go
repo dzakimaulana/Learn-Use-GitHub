@@ -23,7 +23,10 @@ func main() {
 			fmt.Scan(&username)
 			fmt.Print("Enter password: ")
 			fmt.Scan(&password)
-			login(username, password) // Example output
+			err := login(username, password)
+			if err != nil {
+				os.Exit(0)
+			} // Example output
 		} else if input == 2 {
 			fmt.Println("Invalid input, please try again.")
 			fmt.Print("Enter username: ")
