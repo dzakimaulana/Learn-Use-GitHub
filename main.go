@@ -33,7 +33,10 @@ func main() {
 			fmt.Scan(&username)
 			fmt.Print("Enter password: ")
 			fmt.Scan(&password)
-			register(username, password)
+			err := register(username, password)
+			if err != nil {
+				os.Exit(0)
+			}
 		} else {
 			os.Exit(0)
 		}
